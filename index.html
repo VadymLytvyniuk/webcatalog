@@ -3,42 +3,172 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WebCatalog — навчальний проєкт</title>
+  <title>Каталог мережевого обладнання - Головна</title>
   <meta name="description" content="Навчальний проєкт із дисципліни «Веб-технології»">
 </head>
 <body>
 
-  <h1>Каталог мережевого обладнання</h1>
+  <header>
+    <p>Каталог мережевого обладнання</p>
+    <nav aria-label="Головне меню">
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="item.html">Детальніше про товари</a></li>
+        <li><a href="add.html">Додати пристрій</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <p>
-    Даний каталог призначений для систематизації та зручного перегляду інформації про мережеві пристрої (маршрутизатори, комутатори, точки доступу). Він розроблений для системних адміністраторів, мережевих інженерів та IT-фахівців.
-  </p>
+  <main>
+    <h1>Мережеве обладнання</h1>
 
-  <h2>Модель даних</h2>
+    <section>
+      <h2>Список пристроїв у каталозі</h2>
 
-  <p>Кожен запис каталогу містить такі поля:</p>
+      <!-- Картка 1 -->
+      <article>
+        <h3>Catalyst 2960-X 24</h3>
+        <img src="img/placeholder.svg" alt="Зображення пристрою Cisco Catalyst 2960-X 24">
+        <dl>
+          <dt>Категорія:</dt>
+          <dd>Комутатори</dd>
+          <dt>Виробник:</dt>
+          <dd>Cisco</dd>
+          <dt>Кількість портів:</dt>
+          <dd>24</dd>
+          <dt>Пропускна здатність:</dt>
+          <dd>1 Гбіт/с</dd>
+        </dl>
+        <ul>
+          <li>керований</li>
+          <li>L2</li>
+          <li>стекування</li>
+          <li>PoE+</li>
+        </ul>
+        <p><a href="item.html">Детальніше про Cisco Catalyst 2960-X 24</a></p>
+      </article>
 
-  <ul>
-    <li><strong>id</strong> — унікальний ідентифікатор запису</li>
-    <li><strong>name</strong> — назва/модель пристрою</li>
-    <li><strong>manufacturer</strong> — виробник обладанння</li>
-    <li><strong>type</strong> — тип пристрою</li>
-    <li><strong>ports</strong> — кількість портів</li>
-    <li><strong>bandwidth</strong> — пропускна здатність</li>
-  </ul>
+      <!-- Картка 2 -->
+      <article>
+        <h3>hEX RB750Gr3</h3>
+        <img src="img/placeholder.svg" alt="Зображення пристрою MikroTik hEX RB750Gr3">
+        <dl>
+          <dt>Категорія:</dt>
+          <dd>Маршрутизатори</dd>
+          <dt>Виробник:</dt>
+          <dd>MikroTik</dd>
+          <dt>Кількість портів:</dt>
+          <dd>5</dd>
+          <dt>Пропускна здатність:</dt>
+          <dd>1 Гбіт/с</dd>
+        </dl>
+        <ul>
+          <li>RouterOS</li>
+          <li>SOHO</li>
+          <li>бюджетний</li>
+        </ul>
+        <p><a href="item.html">Детальніше про MikroTik hEX RB750Gr3</a></p>
+      </article>
 
-  <h2>Про автора</h2>
+      <!-- Картка 3 -->
+      <article>
+        <h3>UniFi U6-Lite</h3>
+        <img src="img/placeholder.svg" alt="Зображення пристрою Ubiquiti UniFi U6-Lite">
+        <dl>
+          <dt>Категорія:</dt>
+          <dd>Точки доступу</dd>
+          <dt>Виробник:</dt>
+          <dd>Ubiquiti</dd>
+          <dt>Кількість портів:</dt>
+          <dd>1</dd>
+          <dt>Пропускна здатність:</dt>
+          <dd>1 Гбіт/с</dd>
+        </dl>
+        <ul>
+          <li>Wi-Fi 6</li>
+          <li>стельова</li>
+          <li>централізоване керування</li>
+        </ul>
+        <p><a href="item.html">Детальніше про Ubiquiti UniFi U6-Lite</a></p>
+      </article>
 
-  <p>
-    Литвинюк Вадим, група КІ.<br>
-    Спеціальність: 123 "Комп'ютерна інженерія".
-  </p>
+      <!-- Картка 4 -->
+      <article>
+        <h3>FortiGate 60F</h3>
+        <img src="img/placeholder.svg" alt="Зображення пристрою Fortinet FortiGate 60F">
+        <dl>
+          <dt>Категорія:</dt>
+          <dd>Мережеві екрани</dd>
+          <dt>Виробник:</dt>
+          <dd>Fortinet</dd>
+          <dt>Кількість портів:</dt>
+          <dd>10</dd>
+          <dt>Пропускна здатність:</dt>
+          <dd>10 Гбіт/с</dd>
+        </dl>
+        <ul>
+          <li>NGFW</li>
+          <li>VPN</li>
+          <li>фільтрація трафіку</li>
+        </ul>
+        <p><a href="item.html">Детальніше про Fortinet FortiGate 60F</a></p>
+      </article>
 
-  <hr>
+      <!-- Картка 5 -->
+      <article>
+        <h3>CRS326-24G-2S+</h3>
+        <img src="img/placeholder.svg" alt="Зображення пристрою MikroTik CRS326-24G-2S+">
+        <dl>
+          <dt>Категорія:</dt>
+          <dd>Комутатори</dd>
+          <dt>Виробник:</dt>
+          <dd>MikroTik</dd>
+          <dt>Кількість портів:</dt>
+          <dd>26</dd>
+          <dt>Пропускна здатність:</dt>
+          <dd>10 Гбіт/с</dd>
+        </dl>
+        <ul>
+          <li>SFP+</li>
+          <li>L3</li>
+          <li>керований</li>
+        </ul>
+        <p><a href="item.html">Детальніше про MikroTik CRS326-24G-2S+</a></p>
+      </article>
 
-  <p>
-    Навчальний проєкт із дисципліни «Веб-технології».
-  </p>
+      <!-- Картка 6 -->
+      <article>
+        <h3>ISR 1111-8P</h3>
+        <img src="img/placeholder.svg" alt="Зображення пристрою Cisco ISR 1111-8P">
+        <dl>
+          <dt>Категорія:</dt>
+          <dd>Маршрутизатори</dd>
+          <dt>Виробник:</dt>
+          <dd>Cisco</dd>
+          <dt>Кількість портів:</dt>
+          <dd>9</dd>
+          <dt>Пропускна здатність:</dt>
+          <dd>1 Гбіт/с</dd>
+        </dl>
+        <ul>
+          <li>філія</li>
+          <li>VPN</li>
+          <li>вбудований комутатор</li>
+        </ul>
+        <p><a href="item.html">Детальніше про Cisco ISR 1111-8P</a></p>
+      </article>
+    </section>
 
-</body>
-</html>
+    <aside>
+      <h2>Про предметну область</h2>
+      <p>Мережеве обладнання призначене для об'єднання комп'ютерних пристроїв у єдину локальну або глобальну мережу. У даному каталозі представлені активні мережеві пристрої: маршрутизатори, комутатори, точки доступу та міжмережеві екрани.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <h2>Про автора</h2>
+    <p>Литвинюк Вадим, група КІ<br>
+    Спеціальність: 123 "Комп'ютерна інженерія"</p>
+    <hr>
+    <p>Навчальний проєкт із дисципліни «Веб-технології»</p>
+  </footer>
