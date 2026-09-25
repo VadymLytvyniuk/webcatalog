@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог мережевого обладнання - Додати пристрій</title>
+  <meta name="description" content="Навчальний проєкт із дисципліни «Веб-технології»">
+</head>
+<body>
+
+  <header>
+    <p>Каталог мережевого обладнання</p>
+    <nav aria-label="Головне меню">
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="item.html">Деталі пристрою</a></li>
+        <li><a href="add.html">Додати пристрій</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+    <h1>Додати мережевий пристрій</h1>
+
+    <section>
+        <h2>Форма нового запису</h2>
+
+        <form action="/add" method="post">
+
+            <p> 
+                <label for="name">Назва/модель пристрою:</label>
+                <input type="text" id="name" name="name" required maxlength="100">
+            </p>
+
+            <p> 
+                <label for="vendor">Виробник:</label>
+                <input type="text" id="vendor" name="vendor" required maxlength="50">
+            </p>
+
+            <p> 
+                <label for="category">Категорія:</label>
+                <select id="category" name="category" required>
+                    <option value="">Оберіть категорію</option>
+                    <option value="switches">Комутатори</option>
+                    <option value="routers ">Маршрутизатори</option>
+                    <option value="access-points">Точки доступу</option>
+                    <option value="firewalls">Мережеві екрани</option>
+                </select>
+            </p>
+
+            <p> 
+                <label for="year">Рік випуску:</label>
+                <input type="number" id="year" name="year" min="2000" max="2026" required>
+            </p>
+
+            <p> 
+                <label for="ports">Кількість портів:</label>
+                <input type="number" id="ports" name="ports" min="1" max="100" required>
+            </p>
+
+            <p> 
+                <label for="throughput">Пропускна здатність, Гбіт/с:</label>
+                <input type="number" id="throughput" name="throughput" min="1" max="100" required>
+            </p>
+
+            <p> 
+                <label for="price">Ціна, грн:</label>
+                <input type="number" id="price" name="price" min="1" max="1000000">
+            </p>
+
+            <p> 
+                <label for="date">Дата додавання:</label>
+                <input type="date" id="date" name="date">
+            </p>
+
+            <p> 
+                <label for="website">Сайт виробника:</label>
+                <input type="url" id="website" name="website">
+            </p>
+
+            <fieldset>
+                <legend>Підтримка PoE</legend>
+
+                <p> 
+                    <input type="radio" id="poe-yes" name="poe" value="yes">
+                    <label for="poe-yes">Так</label>
+                </p>
+
+                <p> 
+                    <input type="radio" id="poe-no" name="poe" value="no">
+                    <label for="poe-no">Ні</label>
+                </p>
+            </fieldset>
+
+            <p> 
+                <input type="checkbox" id="featured" name="featured">
+                <label for="featured">Рекомендований пристрій</label>
+            </p>
+
+            <p> 
+                <label for="description">Опис пристрою:</label><br>
+                <textarea id="description" name="description" rows="6" cols="50" maxlength="1000"></textarea> 
+            </p>
+
+            <p> <button type="submit">Додати пристрій до каталогу</button></p>
+
+        </form>
+    </section>
+</main>
+
+<footer>
+    <h2>Про автора</h2>
+    <p>Литвинюк Вадим, група КІ<br>
+    Спеціальність: 123 "Комп'ютерна інженерія"</p>
+    <hr>
+    <p>Навчальний проєкт із дисципліни «Веб-технології»</p>
+  </footer>
+
+</body>
+</html>
