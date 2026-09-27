@@ -57,7 +57,7 @@ webcatalog/
 | Робота | Що додано | Статус |
 |---|---|---|
 | ЛР-1 | репозиторій, структура, публікація | ✓ 20.09.26 |
-| ЛР-2 | семантична розмітка | |
+| ЛР-2 | семантична розмітка | ✓ 27.09.26 |
 | ЛР-3 | базове оформлення, дизайн-токени | |
 | ЛР-4 | шапка, картки, підвал | |
 | ЛР-5 | адаптивна сітка | |
@@ -85,8 +85,10 @@ webcatalog/
 
 ## Використані джерела
 
-[Методичні вказівки до виконання лабораторної роботи](https://classroom.google.com/u/0/c/ODc3NjQwNTAyMzI2/a/ODg0MTM5NjUwNjEw/details)  
-[Стартовий репозиторій для виконання роботи наданий викладачем](https://github.com/severyn-courses/webcatalog)
+[Методичні вказівки до виконання лабораторної роботи №1](https://classroom.google.com/u/0/c/ODc3NjQwNTAyMzI2/a/ODg0MTM5NjUwNjEw/details)
+[Методичні вказівки до виконання лабораторної роботи №2](https://classroom.google.com/u/0/c/ODc3NjQwNTAyMzI2/a/ODg1NTI4ODE1OTU0/details)  
+[Стартовий репозиторій для виконання роботи наданий викладачем](https://github.com/severyn-courses/webcatalog)  
+ChatGPT (OpenAI)
 
 ---
 
