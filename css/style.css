@@ -10,10 +10,10 @@
     --c-border: #cbd5e1;
     
     /* Відступи */
-    --space-1: 0.25rem;
-    --space-2: 0.5rem;
-    --space-3: 1rem;
-    --space-4: 2rem;
+    --space-mn: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
     
     /* Радіуси */
     --radius-card: 0.75rem;
@@ -39,7 +39,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--space-3);
+    padding: 0 var(--space-md);
 }
 
 /* ============ 3. Базові елементи ============ */
@@ -55,32 +55,32 @@ body {
 /* Заголовки */
 h1 {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
-    margin: var(--space-4) 0 var(--space-3);
+    margin: var(--space-lg) 0 var(--space-md);
 }
 
 h2 {
     font-size: 1.75rem;
-    margin: var(--space-3) 0 var(--space-2);
+    margin: var(--space-md) 0 var(--space-sm);
 }
 
 h3 {
     font-size: 1.25rem;
-    margin: var(--space-3) 0 var(--space-2);
+    margin: var(--space-md) 0 var(--space-sm);
 }
 
 /* Абзаци та списки */
 p {
-    margin: 0 0 var(--space-3);
+    margin: 0 0 var(--space-md);
 }
 
 ul,
 ol {
-    margin: 0 0 var(--space-3);
-    padding-left: var(--space-4);
+    margin: 0 0 var(--space-md);
+    padding-left: var(--space-lg);
 }
 
 li {
-    margin-bottom: var(--space-1);
+    margin-bottom: var(--space-mn);
 }
 
 /* Посилання */
@@ -104,7 +104,7 @@ a:hover {
 input,
 select,
 textarea {
-    padding: var(--space-2);
+    padding: var(--space-sm);
     border: 0.0625rem solid var(--c-border);
     border-radius: var(--radius-card);
     font-family: inherit;
@@ -128,13 +128,20 @@ textarea:invalid {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-md);
+}
+
+caption {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--c-text);
+    margin-bottom: var(--space-sm);
 }
 
 th,
 td {
     border: 0.0625rem solid var(--c-border);
-    padding: var(--space-2);
+    padding: var(--space-sm);
     text-align: left;
 }
 
@@ -149,7 +156,7 @@ th {
     background-color: var(--c-surface);
     border: 0.0625rem solid var(--c-border);
     border-radius: var(--radius-card);
-    padding: var(--space-3);
+    padding: var(--space-md);
     box-shadow: var(--shadow);
     transition: box-shadow 0.2s, transform 0.2s;
 }
@@ -161,9 +168,20 @@ th {
 
 /* Шапка з навігацією */
 .site-header {
+    width: 100%;
     background-color: var(--c-surface);
     border-bottom: 0.0625rem solid var(--c-border);
-    padding: var(--space-3);
+    padding: var(--space-md);
+}
+
+.site-header > p,
+.site-header > nav {
+    max-width: 75rem;
+    margin-inline: auto;
+}
+
+.site-header > p {
+    font-weight: 700;
 }
 
 .site-header nav ul {
@@ -172,13 +190,13 @@ th {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-3);
+    gap: var(--space-md);
 }
 
 .site-header a {
     color: var(--c-text);
     text-decoration: none;
-    padding: var(--space-1) var(--space-2);
+    padding: var(--space-mn) var(--space-sm);
     border-radius: var(--radius-card);
     transition: color 0.2s, background-color 0.2s;
 }
@@ -200,7 +218,7 @@ th {
     color: var(--c-surface);
     border: 0.0625rem solid var(--c-accent);
     border-radius: var(--radius-card);
-    padding: var(--space-2) var(--space-3);
+    padding: var(--space-sm) var(--space-md);
     font-family: inherit;
     font-size: 1rem;
     cursor: pointer;
@@ -226,11 +244,18 @@ th {
 /* Теги / характеристики */
 .tag {
     display: inline-block;
-    padding: var(--space-1) var(--space-3);
+    padding: var(--space-mn) var(--space-md);
     border-radius: var(--radius-pill);
     background-color: color-mix(in srgb, var(--c-accent) 8%, var(--c-surface));
     color: var(--c-text);
     font-size: 0.875rem;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
 }
 
 .list dt {
@@ -240,20 +265,26 @@ th {
 
 .list dd {
     margin-left: 0;
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-sm);
 }
 
 /* Підвал */
 .site-footer {
+    width: 100%;
     background-color: var(--c-accent-dark);
     color: var(--c-surface);
-    padding: var(--space-4);
+    padding: var(--space-lg);
     text-align: center;
-    margin-top: var(--space-4);
+    margin-top: var(--space-lg);
+}
+
+.site-footer > * {
+    max-width: 75rem;
+    margin-inline: auto;
 }
 
 .site-footer p {
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-sm);
 }
 
 /* ============ 5. Допоміжні класи ============ */
