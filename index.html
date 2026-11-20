@@ -5,32 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог мережевого обладнання - Головна</title>
   <meta name="description" content="Навчальний проєкт із дисципліни «Веб-технології»">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
+  <header class="site-header container">
     <p>Каталог мережевого обладнання</p>
     <!-- aria-label додано за рекомендацією ChatGPT для покращення доступності -->
     <nav aria-label="Головне меню">
       <ul>
-        <li><a href="index.html">Головна</a></li>
+        <li><a href="index.html" class="active">Головна</a></li>
         <li><a href="item.html">Деталі пристрою</a></li>
         <li><a href="add.html">Додати пристрій</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main class="container">
     <h1>Мережеве обладнання</h1>
 
     <section>
       <h2>Список пристроїв у каталозі</h2>
 
       <!-- Картка 1 -->
-      <article>
+      <article class="card">
         <h3>Catalyst 2960-X 24</h3>
         <img src="img/placeholder.svg" alt="Зображення пристрою Cisco Catalyst 2960-X 24">
-        <dl>
+        <dl class="list">
           <dt>Категорія:</dt>
           <dd>Комутатори</dd>
           <dt>Виробник:</dt>
@@ -41,19 +42,19 @@
           <dd>1 Гбіт/с</dd>
         </dl>
         <ul>
-          <li>керований</li>
-          <li>L2</li>
-          <li>стекування</li>
-          <li>PoE+</li>
+          <li class="tag">керований</li>
+          <li class="tag">L2</li>
+          <li class="tag">стекування</li>
+          <li class="tag">PoE+</li>
         </ul>
         <p><a href="item.html">Детальніше про Cisco Catalyst 2960-X 24</a></p>
       </article>
 
       <!-- Картка 2 -->
-      <article>
+      <article class="card">
         <h3>hEX RB750Gr3</h3>
         <img src="img/placeholder.svg" alt="Зображення пристрою MikroTik hEX RB750Gr3">
-        <dl>
+        <dl class="list">
           <dt>Категорія:</dt>
           <dd>Маршрутизатори</dd>
           <dt>Виробник:</dt>
@@ -64,18 +65,18 @@
           <dd>1 Гбіт/с</dd>
         </dl>
         <ul>
-          <li>RouterOS</li>
-          <li>SOHO</li>
-          <li>бюджетний</li>
+          <li class="tag">RouterOS</li>
+          <li class="tag">SOHO</li>
+          <li class="tag">бюджетний</li>
         </ul>
         <p><a href="item.html">Детальніше про MikroTik hEX RB750Gr3</a></p>
       </article>
 
       <!-- Картка 3 -->
-      <article>
+      <article class="card">
         <h3>UniFi U6-Lite</h3>
         <img src="img/placeholder.svg" alt="Зображення пристрою Ubiquiti UniFi U6-Lite">
-        <dl>
+        <dl class="list">
           <dt>Категорія:</dt>
           <dd>Точки доступу</dd>
           <dt>Виробник:</dt>
@@ -86,18 +87,18 @@
           <dd>1 Гбіт/с</dd>
         </dl>
         <ul>
-          <li>Wi-Fi 6</li>
-          <li>стельова</li>
-          <li>централізоване керування</li>
+          <li class="tag">Wi-Fi 6</li>
+          <li class="tag">стельова</li>
+          <li class="tag">централізоване керування</li>
         </ul>
         <p><a href="item.html">Детальніше про Ubiquiti UniFi U6-Lite</a></p>
       </article>
 
       <!-- Картка 4 -->
-      <article>
+      <article class="card">
         <h3>FortiGate 60F</h3>
         <img src="img/placeholder.svg" alt="Зображення пристрою Fortinet FortiGate 60F">
-        <dl>
+        <dl class="list">
           <dt>Категорія:</dt>
           <dd>Мережеві екрани</dd>
           <dt>Виробник:</dt>
@@ -108,18 +109,18 @@
           <dd>10 Гбіт/с</dd>
         </dl>
         <ul>
-          <li>NGFW</li>
-          <li>VPN</li>
-          <li>фільтрація трафіку</li>
+          <li class="tag">NGFW</li>
+          <li class="tag">VPN</li>
+          <li class="tag">фільтрація трафіку</li>
         </ul>
         <p><a href="item.html">Детальніше про Fortinet FortiGate 60F</a></p>
       </article>
 
       <!-- Картка 5 -->
-      <article>
+      <article class="card">
         <h3>CRS326-24G-2S+</h3>
         <img src="img/placeholder.svg" alt="Зображення пристрою MikroTik CRS326-24G-2S+">
-        <dl>
+        <dl class="list">
           <dt>Категорія:</dt>
           <dd>Комутатори</dd>
           <dt>Виробник:</dt>
@@ -130,18 +131,18 @@
           <dd>10 Гбіт/с</dd>
         </dl>
         <ul>
-          <li>SFP+</li>
-          <li>L3</li>
-          <li>керований</li>
+          <li class="tag">SFP+</li>
+          <li class="tag">L3</li>
+          <li class="tag">керований</li>
         </ul>
         <p><a href="item.html">Детальніше про MikroTik CRS326-24G-2S+</a></p>
       </article>
 
       <!-- Картка 6 -->
-      <article>
+      <article class="card">
         <h3>ISR 1111-8P</h3>
         <img src="img/placeholder.svg" alt="Зображення пристрою Cisco ISR 1111-8P">
-        <dl>
+        <dl class="list">
           <dt>Категорія:</dt>
           <dd>Маршрутизатори</dd>
           <dt>Виробник:</dt>
@@ -152,9 +153,9 @@
           <dd>1 Гбіт/с</dd>
         </dl>
         <ul>
-          <li>філія</li>
-          <li>VPN</li>
-          <li>вбудований комутатор</li>
+          <li class="tag">філія</li>
+          <li class="tag">VPN</li>
+          <li class="tag">вбудований комутатор</li>
         </ul>
         <p><a href="item.html">Детальніше про Cisco ISR 1111-8P</a></p>
       </article>
@@ -166,7 +167,7 @@
     </aside>
   </main>
 
-  <footer>
+  <footer class="site-footer container">
     <h2>Про автора</h2>
     <p>Литвинюк Вадим, група КІ<br>
     Спеціальність: 123 "Комп'ютерна інженерія"</p>

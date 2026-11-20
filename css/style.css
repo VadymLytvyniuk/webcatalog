@@ -166,7 +166,10 @@ th {
     padding: var(--space-3);
 }
 
-.site-header nav {
+.site-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-3);
@@ -209,7 +212,7 @@ th {
 }
 
 .button:focus-visible {
-    outline: 0.125rem  solid var(--color-accent);
+    outline: 0.125rem  solid var(--c-accent);
     outline-offset: 0.1875rem;
 }
 
@@ -237,7 +240,7 @@ th {
 
 .list dd {
     margin-left: 0;
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-2);
 }
 
 /* Підвал */
@@ -249,24 +252,12 @@ th {
     margin-top: var(--space-4);
 }
 
-site-footer p {
+.site-footer p {
     margin-bottom: var(--space-2);
 }
 
 /* ============ 5. Допоміжні класи ============ */
-.container {
-  width: 100%;
-  max-width: 72rem;
-  margin-inline: auto;
-  padding-inline: var(--space-md);
-}
-
-.catalog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
-  gap: var(--space-md);
-}
-
+/* Приглушений текст для дрібних підписів/метаданих */
 .text-muted {
   color: var(--c-text-muted);
 }

@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог мережевого обладнання - Деталі пристрою</title>
   <meta name="description" content="Навчальний проєкт із дисципліни «Веб-технології»">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
+  <header class="site-header container">
     <p>Каталог мережевого обладнання</p>
     <!-- aria-label додано за рекомендацією ChatGPT для покращення доступності -->
     <nav aria-label="Головне меню">
       <ul>
         <li><a href="index.html">Головна</a></li>
-        <li><a href="item.html">Деталі пристрою</a></li>
+        <li><a href="item.html" class="active">Деталі пристрою</a></li>
         <li><a href="add.html">Додати пристрій</a></li>
       </ul>
     </nav>
   </header>
   
-  <main>
+  <main class="container">
     <h1>Cisco ISR 1111-8P</h1>
     
-    <section>
+    <section class="card">
         <h2>Інформація про пристрій</h2>
         <img src="img/placeholder.svg" alt="Зображення пристрою Cisco ISR 1111-8P">
         
@@ -73,7 +74,7 @@
     </section>
 </main>
 
-<footer>
+<footer class="site-footer container">
     <h2>Про автора</h2>
     <p>Литвинюк Вадим, група КІ<br>
     Спеціальність: 123 "Комп'ютерна інженерія"</p>
