@@ -1,0 +1,272 @@
+/* ============ 1. Токени ============ */
+:root {
+    /* Кольори */
+    --c-text: #172b4d;
+    --c-text-muted: #475569;
+    --c-accent: #0891b2;
+    --c-accent-dark: #0e7490;
+    --c-bg: #f1f5f9;
+    --c-surface: #ffffff;
+    --c-border: #cbd5e1;
+    
+    /* Відступи */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 2rem;
+    
+    /* Радіуси */
+    --radius-card: 0.75rem;
+    --radius-pill: 999rem;
+    
+    /* Тіні */
+    --shadow: 0 0.125rem 0.5rem rgb(24 34 47 / 0.08);
+    --shadow-hover: 0 0.625rem 1.5rem rgb(24 34 47 / 0.14);
+}
+
+/* ============ 2. Скидання ============ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-3);
+}
+
+/* ============ 3. Базові елементи ============ */
+/* Основні параметри сторінки */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--c-text);
+    background-color: var(--c-bg);
+}
+
+/* Заголовки */
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin: var(--space-4) 0 var(--space-3);
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin: var(--space-3) 0 var(--space-2);
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin: var(--space-3) 0 var(--space-2);
+}
+
+/* Абзаци та списки */
+p {
+    margin: 0 0 var(--space-3);
+}
+
+ul,
+ol {
+    margin: 0 0 var(--space-3);
+    padding-left: var(--space-4);
+}
+
+li {
+    margin-bottom: var(--space-1);
+}
+
+/* Посилання */
+a {
+    color: var(--c-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--c-accent-dark);
+    text-decoration: underline;
+}
+
+:focus-visible {
+    outline: 0.125rem solid var(--c-accent);
+    outline-offset: 0.125rem;
+}
+
+/* Поля форми */
+input,
+select,
+textarea {
+    padding: var(--space-2);
+    border: 0.0625rem solid var(--c-border);
+    border-radius: var(--radius-card);
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    border-color: var(--c-accent);
+    box-shadow: 0 0 0 0.125rem color-mix(in srgb, var(--c-accent) 25%, transparent);
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border-color: var(--c-accent-dark);
+}
+
+/* Таблиці */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--space-3);
+}
+
+th,
+td {
+    border: 0.0625rem solid var(--c-border);
+    padding: var(--space-2);
+    text-align: left;
+}
+
+th {
+    background-color: color-mix(in srgb, var(--c-accent) 10%, var(--c-surface));
+    color: var(--c-text);
+}
+
+/* ============ 4. Компоненти ============ */
+/* Картка запису */
+.card {
+    background-color: var(--c-surface);
+    border: 0.0625rem solid var(--c-border);
+    border-radius: var(--radius-card);
+    padding: var(--space-3);
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-0.1875rem);
+}
+
+/* Шапка з навігацією */
+.site-header {
+    background-color: var(--c-surface);
+    border-bottom: 0.0625rem solid var(--c-border);
+    padding: var(--space-3);
+}
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+
+.site-header a {
+    color: var(--c-text);
+    text-decoration: none;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-card);
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.site-header a:hover {
+    color: var(--c-accent-dark);
+    background-color: color-mix(in srgb, var(--c-accent) 10%, transparent);
+}
+
+.site-header a.active {
+    background-color: var(--c-accent);
+    color: var(--c-surface);
+    font-weight: 600;
+}
+
+/* Кнопка */
+.button {
+    background-color: var(--c-accent);
+    color: var(--c-surface);
+    border: 0.0625rem solid var(--c-accent);
+    border-radius: var(--radius-card);
+    padding: var(--space-2) var(--space-3);
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.button:hover {
+    background-color: var(--c-accent-dark);
+}
+
+.button:focus-visible {
+    outline: 0.125rem  solid var(--color-accent);
+    outline-offset: 0.1875rem;
+}
+
+.button:disabled {
+    background-color: var(--c-text-muted);
+    border-color: var(--c-text-muted);
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+/* Теги / характеристики */
+.tag {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-pill);
+    background-color: color-mix(in srgb, var(--c-accent) 8%, var(--c-surface));
+    color: var(--c-text);
+    font-size: 0.875rem;
+}
+
+.list dt {
+    font-weight: 600;
+    color: var(--c-text-muted);
+}
+
+.list dd {
+    margin-left: 0;
+    margin-bottom: var(--space-sm);
+}
+
+/* Підвал */
+.site-footer {
+    background-color: var(--c-accent-dark);
+    color: var(--c-surface);
+    padding: var(--space-4);
+    text-align: center;
+    margin-top: var(--space-4);
+}
+
+site-footer p {
+    margin-bottom: var(--space-2);
+}
+
+/* ============ 5. Допоміжні класи ============ */
+.container {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  gap: var(--space-md);
+}
+
+.text-muted {
+  color: var(--c-text-muted);
+}
