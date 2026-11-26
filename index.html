@@ -24,6 +24,26 @@
   <main class="container">
     <h1>Мережеве обладнання</h1>
 
+    <aside class="toolbar" aria-label="Фільтри та сортування каталогу">
+      <div class="toolbar-search">
+        <label for="catalog-search">Пошук за моделлю або характеристикою</label>
+        <input id="catalog-search" type="search" placeholder="Наприклад, Catalyst, MikroTik...">
+      </div>
+
+      <div class="toolbar-item">
+        <label for="catalog-category">Категорія</label>
+        <select id="catalog-category">
+          <option value="all">Усі категорії</option>
+          <option value="switches">Комутатори</option>
+          <option value="routers">Маршрутизатори</option>
+          <option value="ap">Точки доступу</option>
+          <option value="firewall">Мережеві екрани</option>
+        </select>
+      </div>
+
+      <button class="button toolbar-reset" type="reset">Скинути</button>
+    </aside>
+
     <section class="cards">
       <h2>Список пристроїв у каталозі</h2>
 
@@ -160,11 +180,6 @@
         <p><a href="item.html">Детальніше про Cisco ISR 1111-8P</a></p>
       </article>
     </section>
-
-    <aside>
-      <h2>Про предметну область</h2>
-      <p>Мережеве обладнання призначене для об'єднання комп'ютерних пристроїв у єдину локальну або глобальну мережу. У даному каталозі представлені активні мережеві пристрої: маршрутизатори, комутатори, точки доступу та міжмережеві екрани.</p>
-    </aside>
   </main>
 
   <footer class="site-footer">
