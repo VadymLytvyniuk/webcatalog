@@ -171,17 +171,21 @@ th {
     width: 100%;
     background-color: var(--c-surface);
     border-bottom: 0.0625rem solid var(--c-border);
+    box-shadow: var(--shadow);
     padding: var(--space-md);
-}
-
-.site-header > p,
-.site-header > nav {
-    max-width: 75rem;
-    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
 }
 
 .site-header > p {
-    font-weight: 700;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--c-text);
 }
 
 .site-header nav ul {
@@ -189,11 +193,13 @@ th {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: var(--space-md);
 }
 
 .site-header a {
+    display: inline-block;
     color: var(--c-text);
     text-decoration: none;
     padding: var(--space-mn) var(--space-sm);
