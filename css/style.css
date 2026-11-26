@@ -158,9 +158,14 @@ th {
     gap: var(--space-md);
 }
 
+.cards > h2 {
+    flex: 0 0 100%;
+    margin: 0;
+}
+
 /* Картка запису */
 .card {
-    flex: 1 1 17.5rem;
+    flex: 1 1 18.5rem;
     display: flex;
     flex-direction: column;
     background-color: var(--c-surface);
@@ -171,14 +176,20 @@ th {
     transition: box-shadow 0.2s, transform 0.2s;
 }
 
-.card > a:last-child {
-    margin-top: auto;
-    align-self: flex-start;
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .card:hover {
     box-shadow: var(--shadow-hover);
     transform: translateY(-0.1875rem);
+}
+
+.card > p:last-child {
+    margin-top: auto;
+    margin-bottom: 0;
 }
 
 /* Шапка з навігацією */
