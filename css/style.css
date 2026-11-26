@@ -151,14 +151,29 @@ th {
 }
 
 /* ============ 4. Компоненти ============ */
+/* Ряд карток каталогу */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
 /* Картка запису */
 .card {
+    flex: 1 1 17.5rem;
+    display: flex;
+    flex-direction: column;
     background-color: var(--c-surface);
     border: 0.0625rem solid var(--c-border);
     border-radius: var(--radius-card);
     padding: var(--space-md);
     box-shadow: var(--shadow);
     transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card > a:last-child {
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 .card:hover {
