@@ -399,7 +399,7 @@ th {
 }
 
 .media-body {
-    flex: 1 1 20rem;
+    flex: 1 1 28rem;
     min-width: 0;
 }
 
@@ -407,10 +407,49 @@ th {
     margin-bottom: var(--space-lg);
 }
 
+.media-body table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.media-body th,
+.media-body td {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 .media-body p:last-child {
-    margin-top: var(--space-lg);
+    margin-top: var(--space-md);
     margin-bottom: 0;
 }
+
+/* Адаптивну поведінку медіа-блоку реалізовано за допомогою ШІ */
+/* Проміжний стан: після перескоку .media-body зображення стають в один ряд */
+@media (max-width: 54rem) {
+    .media-aside {
+        flex: 1 1 100%;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .media-aside .media-img {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+}
+
+/* Вузький екран: повертаємо зображення в одну колонку */
+@media (max-width: 40rem) {
+    .media-aside {
+        flex-direction: column;
+    }
+
+    .media-aside .media-img {
+        flex: none;
+        width: 100%;
+    }
+}
+
 /* ============ 5. Допоміжні класи ============ */
 /* Приглушений текст для дрібних підписів/метаданих */
 .text-muted {
