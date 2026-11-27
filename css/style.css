@@ -374,6 +374,43 @@ th {
     flex: 0 0 auto;
     white-space: nowrap;
 }
+
+/* Медіа-блок на сторінці деталей */
+.media-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.media-aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    flex: 0 0 20.5rem;
+    max-width: 100%;
+}
+
+.media-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-card);
+}
+
+.media-body {
+    flex: 1 1 20rem;
+    min-width: 0;
+}
+
+.media-body > p:first-child {
+    margin-bottom: var(--space-lg);
+}
+
+.media-body p:last-child {
+    margin-top: var(--space-lg);
+    margin-bottom: 0;
+}
 /* ============ 5. Допоміжні класи ============ */
 /* Приглушений текст для дрібних підписів/метаданих */
 .text-muted {
