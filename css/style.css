@@ -234,7 +234,7 @@ th {
     text-decoration: none;
     padding: var(--space-mn) var(--space-sm);
     border-radius: var(--radius-card);
-    transition: color 0.2s, background-color 0.2s;
+    transition: color 0.2s, background-color 0.2s, transform 0.15s;
 }
 
 .site-header a:hover {
@@ -242,10 +242,19 @@ th {
     background-color: color-mix(in srgb, var(--c-accent) 10%, transparent);
 }
 
+.site-header a:active {
+    transform: translateY(0.0625rem);
+}
+
 .site-header a.active {
     background-color: var(--c-accent);
     color: var(--c-surface);
     font-weight: 600;
+}
+
+.site-header a.active:hover {
+    color: var(--c-surface);
+    background-color: var(--c-accent-dark);
 }
 
 /* Кнопка */
@@ -258,7 +267,7 @@ th {
     font-family: inherit;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s, opacity 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, opacity 0.2s, transform 0.15s;
 }
 
 .button:hover {
@@ -266,8 +275,12 @@ th {
 }
 
 .button:focus-visible {
-    outline: 0.125rem  solid var(--c-accent);
+    outline: 0.125rem solid var(--c-accent);
     outline-offset: 0.1875rem;
+}
+
+.button:active:not(:disabled) {
+    transform: translateY(0.0625rem);
 }
 
 .button:disabled {
