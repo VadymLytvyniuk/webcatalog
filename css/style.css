@@ -172,6 +172,7 @@ th {
     flex: 1 1 18.5rem;
     display: flex;
     flex-direction: column;
+    gap: var(--space-sm);
     background-color: var(--c-surface);
     border: 0.0625rem solid var(--c-border);
     border-radius: var(--radius-card);
@@ -193,7 +194,6 @@ th {
 
 .card > p:last-child {
     margin-top: auto;
-    margin-bottom: 0;
 }
 
 /* Шапка з навігацією */
@@ -303,8 +303,7 @@ th {
 .card ul {
     list-style: none;
     padding-left: 0;
-    margin-top: var(--space-sm);
-    margin-bottom: var(--space-md);
+    margin: 0;
 }
 
 .list dt {
@@ -320,6 +319,10 @@ th {
 /* Підвал */
 .site-footer {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
     background-color: var(--c-accent-dark);
     color: var(--c-surface);
     padding: var(--space-lg);
@@ -332,18 +335,18 @@ th {
     margin-inline: auto;
 }
 
+.site-footer h2,
+.site-footer p,
+.site-footer hr {
+    margin: 0;
+}
+
 .site-footer h2 {
-    margin-top: 0;
-    margin-bottom: var(--space-sm);
     font-size: 1.5rem;
 }
 
-.site-footer p {
-    margin-bottom: var(--space-sm);
-}
-
 .site-footer hr {
-    margin: var(--space-sm) auto;
+    width: 100%;
 }
 
 /* Панель фільтрів або дій */
@@ -414,10 +417,9 @@ th {
 .media-body {
     flex: 1 1 28rem;
     min-width: 0;
-}
-
-.media-body > p:first-child {
-    margin-bottom: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
 }
 
 .media-body table {
@@ -429,11 +431,6 @@ th {
 .media-body td {
     overflow-wrap: anywhere;
     word-break: break-word;
-}
-
-.media-body p:last-child {
-    margin-top: var(--space-md);
-    margin-bottom: 0;
 }
 
 /* Адаптивну поведінку медіа-блоку реалізовано за допомогою ШІ */
@@ -466,5 +463,5 @@ th {
 /* ============ 5. Допоміжні класи ============ */
 /* Приглушений текст для дрібних підписів/метаданих */
 .text-muted {
-  color: var(--c-text-muted);
+    color: var(--c-text-muted);
 }
