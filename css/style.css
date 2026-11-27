@@ -108,6 +108,8 @@ a:hover {
 input,
 select,
 textarea {
+    max-width: 100%;
+    min-width: 0;
     padding: var(--space-sm);
     border: 0.0625rem solid var(--c-border);
     border-radius: var(--radius-card);
@@ -126,6 +128,10 @@ input:invalid,
 select:invalid,
 textarea:invalid {
     border-color: var(--c-accent-dark);
+}
+
+textarea {
+    width: 100%;
 }
 
 /* Таблиці */
@@ -153,7 +159,6 @@ th {
     background-color: color-mix(in srgb, var(--c-accent) 10%, var(--c-surface));
     color: var(--c-text);
 }
-
 /* ============ 4. Компоненти ============ */
 /* Ряд карток каталогу */
 .cards {
